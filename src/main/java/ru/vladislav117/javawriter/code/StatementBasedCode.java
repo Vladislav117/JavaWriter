@@ -37,6 +37,11 @@ public class StatementBasedCode extends Code {
         return this;
     }
 
+    public StatementBasedCode addFor(String statements, Code code) {
+        this.statements.add(new ForStatement(statements, code));
+        return this;
+    }
+
     @Override
     public String build(int indentLevel) {
         StringBuilder builder = new StringBuilder();
@@ -146,6 +151,30 @@ public class StatementBasedCode extends Code {
         public String build(int indentLevel) {
             String indent = IndentUtils.indentByLevel(indentLevel);
             return indent + "if (" + condition + ") {\n" + code.build(indentLevel + 1) + "\n" + indent + "} else {\n" + elseCode.build(indentLevel + 1) + "\n" + indent + "}";
+        }
+    }
+
+    public static class ForStatement extends AbstractStatement {
+        protected final String statements;
+        protected final Code code;
+
+        public ForStatement(String statements, Code code) {
+            this.statements = statements;
+            this.code = code;
+        }
+
+        public String getStatements() {
+            return statements;
+        }
+
+        public Code getCode() {
+            return code;
+        }
+
+        @Override
+        public String build(int indentLevel) {
+            String indent = IndentUtils.indentByLevel(indentLevel);
+            return indent + "for (" + statements + ") {\n" + code.build(indentLevel + 1) + "\n" + indent + "}";
         }
     }
 }

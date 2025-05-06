@@ -23,6 +23,7 @@ public class Method {
     protected final String name;
     protected List<Argument> arguments = new ArrayList<>();
     protected @Nullable Code code = null;
+    protected boolean isConstructor = false;
 
     public Method(String name) {
         this.name = name;
@@ -124,6 +125,15 @@ public class Method {
         return this;
     }
 
+    public boolean isConstructor() {
+        return isConstructor;
+    }
+
+    public Method setConstructor(boolean constructor) {
+        isConstructor = constructor;
+        return this;
+    }
+
     public String build(int indentLevel) {
         String indent = IndentUtils.indentByLevel(indentLevel);
         StringBuilder builder = new StringBuilder();
@@ -134,14 +144,16 @@ public class Method {
             builder.append(indent).append(annotation.build()).append("\n");
         }
         builder.append(indent).append(accessModifier.getPrefix());
-        if (isStatic) builder.append("static ");
-        if (isFinal) builder.append("final ");
-        if (isAbstract) builder.append("abstract ");
-        if (isDefault) builder.append("default ");
-        if (aReturn == null) {
-            builder.append("void ");
-        } else {
-            builder.append(aReturn.build()).append(" ");
+        if (!isConstructor) {
+            if (isStatic) builder.append("static ");
+            if (isFinal) builder.append("final ");
+            if (isAbstract) builder.append("abstract ");
+            if (isDefault) builder.append("default ");
+            if (aReturn == null) {
+                builder.append("void ");
+            } else {
+                builder.append(aReturn.build()).append(" ");
+            }
         }
         builder.append(name).append("(");
         for (Argument argument : arguments) {

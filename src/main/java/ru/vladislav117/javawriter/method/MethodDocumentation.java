@@ -51,7 +51,7 @@ public class MethodDocumentation {
         for (String line : lines) {
             builder.append(indent).append(" * ").append(line).append("\n");
         }
-        builder.append(indent).append(" * \n");
+        builder.append(indent).append(" *\n");
         for (Argument argument : method.getArguments()) {
             if (argument.getDescription() == null) continue;
             builder.append(indent).append(" * @param ").append(argument.getName()).append(" ").append(argument.getDescription()).append("\n");

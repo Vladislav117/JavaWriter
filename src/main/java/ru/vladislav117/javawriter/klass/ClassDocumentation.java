@@ -35,7 +35,7 @@ public class ClassDocumentation {
             builder.append(indent).append(" * ").append(line).append("\n");
         }
         if (!lines.isEmpty() && !seeLinks.isEmpty()) {
-            builder.append(indent).append(" * \n");
+            builder.append(indent).append(" *\n");
         }
         for (String seeLink : seeLinks) {
             builder.append(indent).append("@see ").append(seeLink).append("\n");

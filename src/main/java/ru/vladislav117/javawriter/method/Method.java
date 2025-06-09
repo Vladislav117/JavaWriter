@@ -25,8 +25,11 @@ public class Method {
     protected @Nullable Code code = null;
     protected boolean isConstructor = false;
 
+    public Method method;
+
     public Method(String name) {
         this.name = name;
+        method = this;
         accessModifier = defaultAccessModifier;
     }
 

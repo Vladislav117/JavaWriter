@@ -60,7 +60,7 @@ public class MethodDocumentation {
             builder.append(indent).append(" * @return ").append(method.getReturn().getDescription()).append("\n");
         }
         for (AbstractMap.SimpleEntry<String, String> throwDescription : throwsDescriptions) {
-            builder.append(indent).append(" * @throw ").append(throwDescription.getKey()).append(" ").append(throwDescription.getValue()).append("\n");
+            builder.append(indent).append(" * @throws ").append(throwDescription.getKey()).append(" ").append(throwDescription.getValue()).append("\n");
         }
         for (String seeLink : seeLinks) {
             builder.append(indent).append(" * @see ").append(seeLink).append("\n");

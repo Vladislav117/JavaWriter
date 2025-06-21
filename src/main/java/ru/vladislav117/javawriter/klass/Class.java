@@ -154,6 +154,8 @@ public class Class {
             builder.append(subClass.build(indentLevel + 1));
         }
 
+        if (!methods.isEmpty() || !subClasses.isEmpty()) builder.deleteCharAt(builder.length() - 1);
+
         builder.append("}");
         return builder.toString();
     }

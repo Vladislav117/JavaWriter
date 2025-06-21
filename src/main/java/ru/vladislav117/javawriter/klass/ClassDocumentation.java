@@ -13,6 +13,7 @@ public class ClassDocumentation {
         return lines;
     }
 
+    @SuppressWarnings("UnusedReturnValue")
     public ClassDocumentation addLine(String line) {
         lines.add(line);
         return this;
@@ -22,6 +23,7 @@ public class ClassDocumentation {
         return seeLinks;
     }
 
+    @SuppressWarnings("UnusedReturnValue")
     public ClassDocumentation addSeeLink(String seeLink) {
         seeLinks.add(seeLink);
         return this;

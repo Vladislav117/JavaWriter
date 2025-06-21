@@ -16,6 +16,7 @@ public class Return {
         return annotation;
     }
 
+    @SuppressWarnings("UnusedReturnValue")
     public Return setAnnotation(@Nullable Annotation annotation) {
         this.annotation = annotation;
         return this;
@@ -29,6 +30,7 @@ public class Return {
         return description;
     }
 
+    @SuppressWarnings("UnusedReturnValue")
     public Return setDescription(@Nullable String description) {
         this.description = description;
         return this;

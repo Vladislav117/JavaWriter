@@ -37,6 +37,7 @@ public class Method {
         return documentation;
     }
 
+    @SuppressWarnings("UnusedReturnValue")
     public Method setDocumentation(@Nullable MethodDocumentation documentation) {
         this.documentation = documentation;
         if (this.documentation != null) this.documentation.assertMethod(this);
@@ -47,6 +48,7 @@ public class Method {
         return annotations;
     }
 
+    @SuppressWarnings("UnusedReturnValue")
     public Method addAnnotation(Annotation annotation) {
         annotations.add(annotation);
         return this;
@@ -56,6 +58,7 @@ public class Method {
         return accessModifier;
     }
 
+    @SuppressWarnings("UnusedReturnValue")
     public Method setAccessModifier(AccessModifier accessModifier) {
         this.accessModifier = accessModifier;
         return this;
@@ -65,6 +68,7 @@ public class Method {
         return isStatic;
     }
 
+    @SuppressWarnings("UnusedReturnValue")
     public Method setStatic(boolean aStatic) {
         isStatic = aStatic;
         return this;
@@ -74,6 +78,7 @@ public class Method {
         return isFinal;
     }
 
+    @SuppressWarnings("UnusedReturnValue")
     public Method setFinal(boolean aFinal) {
         isFinal = aFinal;
         return this;
@@ -83,6 +88,7 @@ public class Method {
         return isAbstract;
     }
 
+    @SuppressWarnings("UnusedReturnValue")
     public Method setAbstract(boolean anAbstract) {
         isAbstract = anAbstract;
         return this;
@@ -92,6 +98,7 @@ public class Method {
         return isDefault;
     }
 
+    @SuppressWarnings("UnusedReturnValue")
     public Method setDefault(boolean aDefault) {
         isDefault = aDefault;
         return this;
@@ -101,6 +108,7 @@ public class Method {
         return aReturn;
     }
 
+    @SuppressWarnings("UnusedReturnValue")
     public Method setReturn(@Nullable Return aReturn) {
         this.aReturn = aReturn;
         return this;
@@ -114,6 +122,7 @@ public class Method {
         return arguments;
     }
 
+    @SuppressWarnings("UnusedReturnValue")
     public Method addArgument(Argument argument) {
         arguments.add(argument);
         return this;
@@ -123,6 +132,7 @@ public class Method {
         return code;
     }
 
+    @SuppressWarnings("UnusedReturnValue")
     public Method setCode(@Nullable Code code) {
         this.code = code;
         return this;
@@ -132,6 +142,7 @@ public class Method {
         return isConstructor;
     }
 
+    @SuppressWarnings("UnusedReturnValue")
     public Method setConstructor(boolean constructor) {
         isConstructor = constructor;
         return this;

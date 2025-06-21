@@ -24,6 +24,7 @@ public class Argument {
         return description;
     }
 
+    @SuppressWarnings("UnusedReturnValue")
     public Argument setDescription(@Nullable String description) {
         this.description = description;
         return this;

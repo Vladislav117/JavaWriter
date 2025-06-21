@@ -21,6 +21,7 @@ public class MethodDocumentation {
         return lines;
     }
 
+    @SuppressWarnings("UnusedReturnValue")
     public MethodDocumentation addLine(String line) {
         lines.add(line);
         return this;
@@ -30,6 +31,7 @@ public class MethodDocumentation {
         return seeLinks;
     }
 
+    @SuppressWarnings("UnusedReturnValue")
     public MethodDocumentation addSeeLink(String seeLink) {
         seeLinks.add(seeLink);
         return this;
@@ -39,6 +41,7 @@ public class MethodDocumentation {
         return throwsDescriptions;
     }
 
+    @SuppressWarnings("UnusedReturnValue")
     public MethodDocumentation addThrowDescription(String throwable, String description) {
         throwsDescriptions.add(new AbstractMap.SimpleEntry<>(throwable, description));
         return this;

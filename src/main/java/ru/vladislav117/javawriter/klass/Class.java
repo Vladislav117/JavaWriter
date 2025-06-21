@@ -40,6 +40,7 @@ public class Class {
         return documentation;
     }
 
+    @SuppressWarnings("UnusedReturnValue")
     public Class setDocumentation(@Nullable ClassDocumentation documentation) {
         this.documentation = documentation;
         return this;
@@ -49,6 +50,7 @@ public class Class {
         return annotations;
     }
 
+    @SuppressWarnings("UnusedReturnValue")
     public Class addAnnotation(Annotation annotation) {
         annotations.add(annotation);
         return this;
@@ -58,6 +60,7 @@ public class Class {
         return accessModifier;
     }
 
+    @SuppressWarnings("UnusedReturnValue")
     public Class setAccessModifier(AccessModifier accessModifier) {
         this.accessModifier = accessModifier;
         return this;
@@ -67,6 +70,7 @@ public class Class {
         return isStatic;
     }
 
+    @SuppressWarnings("UnusedReturnValue")
     public Class setStatic(boolean aStatic) {
         isStatic = aStatic;
         return this;
@@ -76,6 +80,7 @@ public class Class {
         return isFinal;
     }
 
+    @SuppressWarnings("UnusedReturnValue")
     public Class setFinal(boolean aFinal) {
         isFinal = aFinal;
         return this;
@@ -93,6 +98,7 @@ public class Class {
         return fields;
     }
 
+    @SuppressWarnings("UnusedReturnValue")
     public Class addField(Field field) {
         fields.add(field);
         return this;
@@ -102,6 +108,7 @@ public class Class {
         return methods;
     }
 
+    @SuppressWarnings("UnusedReturnValue")
     public Class addMethod(Method method) {
         methods.add(method);
         return this;
@@ -111,6 +118,7 @@ public class Class {
         return subClasses;
     }
 
+    @SuppressWarnings("UnusedReturnValue")
     public Class addSubClass(Class subClass) {
         subClasses.add(subClass);
         return this;

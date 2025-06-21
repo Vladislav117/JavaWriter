@@ -24,6 +24,7 @@ public class Field {
         return accessModifier;
     }
 
+    @SuppressWarnings("UnusedReturnValue")
     public Field setAccessModifier(AccessModifier accessModifier) {
         this.accessModifier = accessModifier;
         return this;
@@ -33,6 +34,7 @@ public class Field {
         return isStatic;
     }
 
+    @SuppressWarnings("UnusedReturnValue")
     public Field setStatic(boolean isStatic) {
         this.isStatic = isStatic;
         return this;
@@ -42,6 +44,7 @@ public class Field {
         return isFinal;
     }
 
+    @SuppressWarnings("UnusedReturnValue")
     public Field setFinal(boolean isFinal) {
         this.isFinal = isFinal;
         return this;
@@ -51,6 +54,7 @@ public class Field {
         return annotation;
     }
 
+    @SuppressWarnings("UnusedReturnValue")
     public Field setAnnotation(@Nullable Annotation annotation) {
         this.annotation = annotation;
         return this;
@@ -68,6 +72,7 @@ public class Field {
         return initializer;
     }
 
+    @SuppressWarnings("UnusedReturnValue")
     public Field setInitializer(@Nullable String initializer) {
         this.initializer = initializer;
         return this;

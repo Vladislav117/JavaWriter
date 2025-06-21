@@ -12,31 +12,37 @@ public class StatementBasedCode extends Code {
         return statements;
     }
 
+    @SuppressWarnings("UnusedReturnValue")
     public StatementBasedCode addStatement(AbstractStatement statement) {
         statements.add(statement);
         return this;
     }
 
+    @SuppressWarnings("UnusedReturnValue")
     public StatementBasedCode addStatement(String statement) {
         statements.add(new Statement(statement));
         return this;
     }
 
+    @SuppressWarnings("UnusedReturnValue")
     public StatementBasedCode addIf(String condition, Code code) {
         statements.add(new IfStatement(condition, code));
         return this;
     }
 
+    @SuppressWarnings("UnusedReturnValue")
     public StatementBasedCode addSimpleIf(String condition, String statement) {
         statements.add(new SimpleIfStatement(condition, statement));
         return this;
     }
 
+    @SuppressWarnings("UnusedReturnValue")
     public StatementBasedCode addIfElse(String condition, Code code, Code elseCode) {
         statements.add(new IfElseStatement(condition, code, elseCode));
         return this;
     }
 
+    @SuppressWarnings("UnusedReturnValue")
     public StatementBasedCode addFor(String statements, Code code) {
         this.statements.add(new ForStatement(statements, code));
         return this;

@@ -1,6 +1,6 @@
-# JavaLibraryTemplate
+# JavaWriter
 
-JavaLibraryTemplate - шаблон java-библиотеки.
+JavaWriter - генератор java-кода. Создан для генерации классов с множеством идентичных методов.
 
 ## Добавление зависимости
 
@@ -12,7 +12,7 @@ repositories {
 }
 
 dependencies {
-    implementation 'com.github.Vladislav117:JavaLibraryTemplate:0.0.0'
+    implementation 'com.github.Vladislav117:JavaWriter:0.0.0'
 }
 ```
 
@@ -24,7 +24,7 @@ dependencies {
 
 ## Документация
 
-Документация представлена в исходном коде (javadoc).
+Так как проект является вспомогательным, а не основным, написание документации не входит в список основных задач.
 
 ## Использование
 
